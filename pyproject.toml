@@ -1,0 +1,12 @@
+[project]
+name = "auto-draw"
+version = "0.1.0"
+description = "自动鼠标绘制图像脚本"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "opencv-python>=4.8.0",
+    "numpy>=1.26.0",
+    "pyautogui>=0.9.54",
+    "keyboard>=0.13.5",
+]
