@@ -2,6 +2,8 @@
 
 一个将图片转换为二值化数据，并控制鼠标自动绘制图像的 Python 工具。
 
+![](./images/1.png)
+
 ## 功能特点
 
 - 🖼️ 图片二值化处理，生成紧凑的 bin 格式
@@ -81,9 +83,11 @@ uv run python main.py draw output.bin --check-interval 8
 1. **准备图片**：选择一张清晰的图片（建议线条简单、对比度高）
 
 2. **转换为 bin 文件**：
+
    ```bash
    uv run python main.py encode your_image.png output.bin
    ```
+
    会生成 `output.bin` 和 `output.png`（黑白预览图）
 
 3. **打开绘图软件**：如 Windows 画图、Photoshop、SAI 等
@@ -91,9 +95,11 @@ uv run python main.py draw output.bin --check-interval 8
 4. **选择画笔工具**：设置为铅笔或硬边画笔，关闭防抖/平滑功能
 
 5. **执行绘制**：
+
    ```bash
    uv run python main.py draw output.bin --stroke 2
    ```
+
    等待 3 秒后自动开始绘制
 
 6. **中断绘制**：按 `ESC` 键可随时停止
@@ -102,25 +108,25 @@ uv run python main.py draw output.bin --check-interval 8
 
 ### encode 命令参数
 
-| 参数 | 简写 | 默认值 | 说明 |
-|------|------|--------|------|
-| `input` | - | 必填 | 输入图片路径 |
-| `output` | - | 必填 | 输出 bin 文件路径 |
-| `--threshold` | `-t` | 128 | 二值化阈值 (0-255) |
-| `--max-size` | `-m` | 128 | 最大尺寸限制 |
-| `--no-preview` | - | false | 不保存预览图 |
+| 参数           | 简写 | 默认值 | 说明               |
+| -------------- | ---- | ------ | ------------------ |
+| `input`        | -    | 必填   | 输入图片路径       |
+| `output`       | -    | 必填   | 输出 bin 文件路径  |
+| `--threshold`  | `-t` | 128    | 二值化阈值 (0-255) |
+| `--max-size`   | `-m` | 128    | 最大尺寸限制       |
+| `--no-preview` | -    | false  | 不保存预览图       |
 
 ### draw 命令参数
 
-| 参数 | 简写 | 默认值 | 说明 |
-|------|------|--------|------|
-| `input` | - | 必填 | bin 文件路径 |
-| `--stroke` | `-s` | 1 | 画笔粗细（像素） |
-| `--delay` | - | 0.000001 | 鼠标移动间隔（秒） |
-| `--start-x` | - | null | 起始 X 坐标 |
-| `--start-y` | - | null | 起始 Y 坐标 |
-| `--pause` | `-p` | 3.0 | 开始前等待时间（秒） |
-| `--check-interval` | - | 16 | 坐标校正间隔（像素） |
+| 参数               | 简写 | 默认值   | 说明                 |
+| ------------------ | ---- | -------- | -------------------- |
+| `input`            | -    | 必填     | bin 文件路径         |
+| `--stroke`         | `-s` | 1        | 画笔粗细（像素）     |
+| `--delay`          | -    | 0.000001 | 鼠标移动间隔（秒）   |
+| `--start-x`        | -    | null     | 起始 X 坐标          |
+| `--start-y`        | -    | null     | 起始 Y 坐标          |
+| `--pause`          | `-p` | 3.0      | 开始前等待时间（秒） |
+| `--check-interval` | -    | 16       | 坐标校正间隔（像素） |
 
 ## 注意事项
 
@@ -160,3 +166,4 @@ uv sync
 
 # 运行脚本
 uv run python main.py --help
+```
