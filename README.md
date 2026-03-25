@@ -19,7 +19,7 @@
 
 ## 安装
 
-### 1. 安装 uv（如果尚未安装）
+### 1. 安装 uv
 
 ```bash
 # Windows (PowerShell)
@@ -35,7 +35,8 @@ curl -LsSf https://astral.org.cn/uv/install.sh | sh
 # 创建虚拟环境并安装依赖
 uv sync
 
-# 或者直接使用 uv run 运行脚本
+# 或者直接使用 uv run 运行脚本，依赖将自动安装
+uv run main.py --help
 ```
 
 ## 使用方法
@@ -145,25 +146,3 @@ uv run python main.py draw output.bin --check-interval 8
    - 使用高对比度的线条图
    - 避免过于复杂的图像
    - 尺寸过大自动缩放可能影响细节
-
-## 项目结构
-
-```
-auto_draw/
-├── main.py          # 主入口，命令行解析
-├── encode.py        # 图片转 bin 模块
-├── draw.py          # 鼠标绘制模块
-├── utils.py         # 共用工具函数
-├── pyproject.toml   # 项目配置
-└── README.md        # 说明文档
-```
-
-## 开发
-
-```bash
-# 安装开发依赖
-uv sync
-
-# 运行脚本
-uv run python main.py --help
-```
